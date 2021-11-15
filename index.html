@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Battleship</title>
+</head>
+<body>
+    <div class="page">
+
+    <header>
+        <img id="sound" src="img/sound.png" data-state="sound" alt="">
+
+        <input type="checkbox" id="toggle_checkbox">
+        <label for="toggle_checkbox">
+            <div id="star">
+                <div class="star" id="star-1">★</div>
+                <div class="star" id="star-2">★</div>
+            </div>
+            <div id="moon"></div>
+        </label>
+
+        <div id="logo">Battleship</div>
+    </header>
+
+    <div id="main-section">
+
+        <main id="main">
+            <canvas></canvas>
+        </main>
+
+        <aside id="aside-menu">
+
+            <h4>Control buttons</h4>
+
+            <div id="control-buttons-section">
+                <input type="button" class="control-button" id="Newgame" value="New game"/>
+                <input type="button" class="control-button" id="Generate" value="Generate"/>
+            </div>
+
+            <h4>Settings</h4>
+
+            <div id="settings-buttons-section">
+                <input type="button" class="settings-button" id="Easy" value="Easy"/>
+                <input type="button" class="settings-button" id="Medium" value="Medium">
+                <input type="button" class="settings-button" id="Hard" value="Hard"/>
+                <input type="button" class="settings-button" id="Insane" value="Insane"/>
+            </div>
+
+            <div id="music-player-section">
+
+                <h4>Music player</h4>
+
+                <div id="music-player">
+
+                    <audio id="audio" preload="auto" tabindex="0" controls="controls">
+                        <source src="audio/background/track1.mp3" type="audio/mp3">
+                        Your browser doesn't support music player.
+                    </audio>
+
+                    <ul id="playlist">
+                        <li class="active" id="1">
+                            <a>Track1</a>
+                        </li>
+                        <li class="" id="2">
+                            <a>Track1</a>
+                        </li>
+                        <li class="" id="3">
+                            <a>Track3</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div id="copyright">&copy; Yevheniy Tomenchuk</div>
+        <div id="readme"><a href="KAJ_readme.pdf">README</a></div>
+    </footer>
+
+</div>
+    <script src="build/Utils.js"></script>
+    <script src="build/AudioManager.js"></script>
+    <script src="build/Game.js"></script>
+    <script src="build/Topology.js"></script>
+    <script src="build/Mouse.js"></script>
+    <script src="build/script.js"></script>
+</body>
+</html>
